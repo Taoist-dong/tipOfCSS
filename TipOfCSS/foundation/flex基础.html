@@ -1,0 +1,316 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./flexStyle.css" />
+    <title>display常用</title>
+</head>
+
+<body>
+    <h3 style="margin:20px 10px;">flex自适应布局</h3>
+    <div class="flex-display">
+        <div class="flex-box">1</div>
+        <div class="flex-box">2</div>
+        <div class="flex-box">3</div>
+    </div>
+    <h3 style="margin:20px 10px;">flex属性</h3>
+    <ul>
+        <li>flex-direction</li>
+        <li>flex-wrap</li>
+        <li>flex-flow</li>
+        <li>justify-content</li>
+        <li>align-items</li>
+        <li>align-content</li>
+    </ul>
+    <h4 style="margin:20px 10px;">flex属性:flex-direction</h4>
+    <h5 style="margin:20px 10px;">flex-direction:row-reverse 主轴为水平方向，起点在右端。</h5>
+    <div class="flex-row-reverse">
+        <div class="flex-box">1</div>
+        <div class="flex-box">2</div>
+        <div class="flex-box">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">flex-direction:column 主轴为垂直方向，起点在上沿。</h5>
+    <div class="flex-column">
+        <div class="flex-box">1</div>
+        <div class="flex-box">2</div>
+        <div class="flex-box">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">flex-direction:column-reverse 主轴为垂直方向，起点在下沿。</h5>
+    <div class="flex-column-reverse">
+        <div class="flex-box">1</div>
+        <div class="flex-box">2</div>
+        <div class="flex-box">3</div>
+    </div>
+    <h4 style="margin:20px 10px;">flex属性:flex-wrap</h4>
+    <p>定义水平轴线上换行方式。默认不换行nowrap；</p>
+    <h5 style="margin:20px 10px;">flex-wrap:wrap 换行，第一行在上方</h5>
+    <!-- 什么情况下不换行,设置flex：1则不会换行 -->
+    <div class="flex-display">
+        <div class="flex-box-width-diff">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box-width-diff">3</div>
+        <div class="flex-box-width-diff">4</div>
+        <div class="flex-box-width-diff">5</div>
+    </div>
+    <div class="flex-wrap">
+        <div class="flex-box-width-diff">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box-width-diff">3</div>
+        <div class="flex-box-width-diff">4</div>
+        <div class="flex-box-width-diff">5</div>
+    </div>
+    <h5 style="margin:20px 10px;">flex-wrap:wrap-reverse 换行，第一行在下方</h5>
+    <div class="flex-wrap-reverse">
+        <div class="flex-box-width-diff">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box-width-diff">3</div>
+        <div class="flex-box-width-diff">4</div>
+        <div class="flex-box-width-diff">5</div>
+    </div>
+    <h4 style="margin:20px 10px;">flex属性:flex-flow</h4>
+    <p>flex-flow是flex-direction和flex-wrap属性的组合，flex-flow:
+        <flex-direction>
+            <flex-wrap>，默认为 row nowrap。</p>
+    <h5 style="margin:20px 10px;">flex-flow:column wrap 纵向轴，换行</h5>
+    <!-- 当第一个值为column时，父盒子需要设置height，第二个wrap换行属性才能生效 -->
+    <div class="flex-flow">
+        <div class="flex-box-width-diff">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box-width-diff">3</div>
+        <div class="flex-box-width-diff">4</div>
+        <div class="flex-box-width-diff">5</div>
+    </div>
+    <h4 style="margin:20px 10px;">flex属性:justify-content</h4>
+    <p>justify-content属性定义了项目在轴线上的对齐方式。默认左对齐。子属性有flex-start | flex-end | center | space-between | space-around;</p>
+    <h5 style="margin:20px 10px;">justify-content:flex-start 左对齐</h5>
+    <div class="flex-start">
+        <div class="flex-box2">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box2">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">justify-content:flex-end 右对齐</h5>
+    <div class="flex-end">
+        <div class="flex-box2">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box2">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">justify-content:center 居中</h5>
+    <div class="flex-center">
+        <div class="flex-box2">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box2">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">justify-content:space-between 两端对齐，每个盒子间距相等，盒子间的间距属性失效</h5>
+    <div class="flex-space-between">
+        <div class="flex-box2">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box2">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">justify-content:space-between 两端对齐，两个盒子情况</h5>
+    <div class="flex-space-between">
+        <div class="flex-box2">1</div>
+        <div class="flex-box2">2</div>
+    </div>
+    <h5 style="margin:20px 10px;">justify-content:space-around 每个盒子与其他盒子左右边距相等，相当于取第一个盒子与屏幕间距， 与其他盒子间距为屏幕间距的两倍,此间距通过屏幕间距减去所有盒子宽度属性计算得之。
+    </h5>
+    <div class="flex-space-around">
+        <div class="flex-box2">1</div>
+        <div class="flex-box-width-diff">2</div>
+        <div class="flex-box2">3</div>
+    </div>
+    <h4 style="margin:20px 10px;">flex属性:align-items</h4>
+    <p>align-items属性定义项目在交叉轴上如何对齐，子属性有flex-start | flex-end | center | baseline | stretch;</p>
+    <h5 style="margin:20px 10px;">align-items:flex-start 左上对齐</h5>
+    <div class="flex-align-items-start" id="diffHeight">
+        <div class="flex-box-h1">1</div>
+        <div class="flex-box-h2">2</div>
+        <div class="flex-box-h3">3</div>
+        <div class="flex-box-h4">4</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-items:flex-end 左下对齐</h5>
+    <div class="flex-align-items-end" id="diffHeight">
+        <div class="flex-box-h1">1</div>
+        <div class="flex-box-h2">2</div>
+        <div class="flex-box-h3">3</div>
+        <div class="flex-box-h4">4</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-items:center 中间对齐</h5>
+    <div class="flex-align-items-center" id="diffHeight">
+        <div class="flex-box-h1">1</div>
+        <div class="flex-box-h2">2</div>
+        <div class="flex-box-h3">3</div>
+        <div class="flex-box-h4">4</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-items:stretch 如果盒子未设置高度或设为auto，将占满整个容器的高度</h5>
+    <div class="flex-align-items-stretch" id="diffHeight">
+        <div class="flex-box-h1">1</div>
+        <div class="flex-box-h2">2</div>
+        <div class="flex-box-h3">3</div>
+        <div class="flex-box-h4">4</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-items:baseline 盒子内第一行文字基线对齐</h5>
+    <div class="flex-align-items-baseline" id="diffHeight">
+        <div class="flex-box-h1">1</div>
+        <div class="flex-box-h2">2</div>
+        <div class="flex-box-h3">3</div>
+        <div class="flex-box-h4">4</div>
+    </div>
+    <h4 style="margin:20px 10px;">flex属性:align-content</h4>
+    <p>align-content属性定义盒子在多条轴上如何对齐（如多行），子属性有flex-start | flex-end | center | space-between | space-around | stretch;;</p>
+    <h5 style="margin:20px 10px;">align-content:flex-start 交叉轴起点对齐（交叉轴：项目在x轴上对齐，则交叉轴为y轴）</h5>
+    <div class="flex-align-content-start" id="diffwidth">
+        <div class="flex-box-w1">1</div>
+        <div class="flex-box-w1">2</div>
+        <div class="flex-box-w3">3</div>
+        <div class="flex-box-w4">4</div>
+        <div class="flex-box-w1">5</div>
+        <div class="flex-box-w2">6</div>
+        <div class="flex-box-w2">7</div>
+        <div class="flex-box-w4">8</div>
+        <div class="flex-box-w1">9</div>
+        <div class="flex-box-w2">10</div>
+        <div class="flex-box-w3">11</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-content:flex-end 交叉轴终点对齐</h5>
+    <div class="flex-align-content-end" id="diffwidth">
+        <div class="flex-box-w1">1</div>
+        <div class="flex-box-w1">2</div>
+        <div class="flex-box-w3">3</div>
+        <div class="flex-box-w4">4</div>
+        <div class="flex-box-w1">5</div>
+        <div class="flex-box-w2">6</div>
+        <div class="flex-box-w2">7</div>
+        <div class="flex-box-w4">8</div>
+        <div class="flex-box-w1">9</div>
+        <div class="flex-box-w2">10</div>
+        <div class="flex-box-w3">11</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-content:center 交叉轴中间对齐</h5>
+    <div class="flex-align-content-center" id="diffwidth">
+        <div class="flex-box-w1">1</div>
+        <div class="flex-box-w1">2</div>
+        <div class="flex-box-w3">3</div>
+        <div class="flex-box-w4">4</div>
+        <div class="flex-box-w1">5</div>
+        <div class="flex-box-w2">6</div>
+        <div class="flex-box-w2">7</div>
+        <div class="flex-box-w4">8</div>
+        <div class="flex-box-w1">9</div>
+        <div class="flex-box-w2">10</div>
+        <div class="flex-box-w3">11</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-content:stretch 不设子盒子高度时，占满整个交叉轴</h5>
+    <div class="flex-align-content-stretch" id="diffwidth">
+        <div class="flex-box-w1">1</div>
+        <div class="flex-box-w1">2</div>
+        <div class="flex-box-w3">3</div>
+        <div class="flex-box-w4">4</div>
+        <div class="flex-box-w1">5</div>
+        <div class="flex-box-w2">6</div>
+        <div class="flex-box-w2">7</div>
+        <div class="flex-box-w4">8</div>
+        <div class="flex-box-w1">9</div>
+        <div class="flex-box-w2">10</div>
+        <div class="flex-box-w3">11</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-content:space-between 交叉轴两端对齐</h5>
+    <div class="flex-align-content-between" id="diffwidth">
+        <div class="flex-box-w1">1</div>
+        <div class="flex-box-w1">2</div>
+        <div class="flex-box-w3">3</div>
+        <div class="flex-box-w4">4</div>
+        <div class="flex-box-w1">5</div>
+        <div class="flex-box-w2">6</div>
+        <div class="flex-box-w2">7</div>
+        <div class="flex-box-w4">8</div>
+        <div class="flex-box-w1">9</div>
+        <div class="flex-box-w2">10</div>
+        <div class="flex-box-w3">11</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-content:space-around 交叉轴上子盒子间距相等</h5>
+    <div class="flex-align-content-around" id="diffwidth">
+        <div class="flex-box-w1">1</div>
+        <div class="flex-box-w1">2</div>
+        <div class="flex-box-w3">3</div>
+        <div class="flex-box-w4">4</div>
+        <div class="flex-box-w1">5</div>
+        <div class="flex-box-w2">6</div>
+        <div class="flex-box-w2">7</div>
+        <div class="flex-box-w4">8</div>
+        <div class="flex-box-w1">9</div>
+        <div class="flex-box-w2">10</div>
+        <div class="flex-box-w3">11</div>
+    </div>
+    <h3 style="margin:20px 10px;">flex子项目属性</h3>
+    <p>
+        在设置父盒子为flex布局的情况下，对于父盒子里面的子盒子，也可添加某些属性以满足我们所需，比如对不同盒子进行不同 比例缩小放大、设置不同的对齐方式、子盒子间进行排序等；对应的属性有order、flex-grow、flex-shrink、flex-basis、 flex、align-self。
+    </p>
+    <h5 style="margin:20px 10px;">flex-grow 盒子进行放大，默认为1，当为0时不放大，小于1时为缩小， 大于1时放大。
+    </h5>
+    <!-- 不设置盒子宽度，自适应屏幕宽度，这样一来盒子的放大属性将生效 -->
+    <div class="flex-display" id="childPty">
+        <div class="flex-box">1</div>
+        <div class="flex-box-grow">2</div>
+        <div class="flex-box">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">flex-shrink 盒子进行缩小，默认为1，与放大属性相反， 当为0时不，小于1时为缩小，大于1时放大
+    </h5>
+    <!-- 不设置盒子宽度，自适应屏幕宽度，这样一来盒子的放大属性将生效 -->
+    <div class="flex-display" id="childPty">
+        <div class="flex-box">1</div>
+        <div class="flex-box-shrink">2</div>
+        <div class="flex-box">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">order 定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+    </h5>
+    <!-- 以下排列顺序为2，1，3 ,不会自适应屏幕宽度-->
+    <div class="flex-display" id="childPty">
+        <div class="flex-box-order2">1</div>
+        <div class="flex-box-order1">2</div>
+        <div class="flex-box-order3">3</div>
+    </div>
+    <h5 style="margin:20px 10px;">align-self align-self属性允许单个盒子有与其他盒子不一样的对齐方式， 可覆盖align-items属性。默认继承父元素的align-items属性，如果没有父元素，则等同于stretch。
+    </h5>
+    <!-- 不设置盒子宽度，自适应屏幕宽度，这样一来盒子的放大属性将生效 -->
+    <div class="flex-display" id="childPty">
+        <div class="flex-box">1</div>
+        <div class="flex-box-align-self">2</div>
+        <div class="flex-box">3</div>
+    </div>
+</body>
+
+</html>
+<style>
+    #childPty div {
+        margin: 0 20px;
+        height: 40px;
+        width: 100px;
+        background-color: red;
+        font-size: 15px;
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .flex-box-grow {
+        flex-grow: 0.5;
+    }
+    
+    .flex-box-shrink {
+        flex-shrink: 2;
+    }
+    
+    .flex-box-order1 {
+        order: 1;
+    }
+    
+    .flex-box-order2 {
+        order: 2;
+    }
+    
+    .flex-box-order3 {
+        order: 3;
+    }
+    
+    .flex-box-shrink {
+        flex-shrink: 0.5;
+    }
+</style>
